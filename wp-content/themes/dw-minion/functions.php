@@ -99,3 +99,24 @@ function alx_plugins() {
 	tgmpa( $plugins );
 }
 add_action( 'tgmpa_register', 'alx_plugins' );
+
+// Dw Minion top sidebar
+add_action( 'widgets_init', 'dw_minion_register_sidebar', 20 );
+function dw_minion_register_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Top Sidebar', 'designwall' ),
+        'id' => 'top-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+}
+add_action( 'dw_minion_top_sidebar', 'dw_minion_top_sidebar' );
+function dw_minion_top_sidebar() {
+    ?>
+    <div class="top-sidebar">
+        <?php dynamic_sidebar( 'top-sidebar' ); ?>
+    </div>
+    <?php
+}

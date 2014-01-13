@@ -14,6 +14,13 @@ Launch your new site with Lobster, built with Bootstrap 3.0.2 Lobster is lightwe
 To enable the Header Image in the Theme Customizer to go Custom Header and check to the checkbox to enable this feature.
 
 
+== OVERWRITE THEME-OPTIONS.PHP, CUSTOM-HEADER.PHP AND MEDIA.PHP ==
+
+To overwrite the parents theme's functionality simply copy and paste the parent files into your Child Theme 'inc' folder where you can edit and customize them as you would template files in the root.
+
+For instance in the media.php you can change the Lobster front to any of your chosing, and in the theme-options you can change the star icon or delete it!
+
+
 
 == INSTALL CAROUSEL ==
 To use the Carousel on the Front Page as displayed in Demo. Download CTP Bootstrap Carousel from: http://wordpress.org/plugins/cpt-bootstrap-carousel/
@@ -22,26 +29,6 @@ Open ctp-bootstrap-carousel.php in a text-editor and on line 128 which reads: " 
 " 'showcaption' => 'false', "
 
 This now hides the caption and the read more link, which do not render well with responsive design.
-
-
-
-== CHANGE JUMBO ICON ==
-
-To change the Star / Jumbo Icon (icon-star-empty) to any one of Font Awesome's 361 different options go to:
-
-....your/path/to/wp-content/themes/lobster/inc/theme-options.php
-
-on line: 39 you'll see ->     '<i class="jumbo-icon icon-star-empty"></i>'
-
-Simply change the 'icon-star-empty' to any other icon supported by font-awesome. Below is a link to their range of icons.
-
-see: http://fortawesome.github.io/Font-Awesome/icons/
-
-Example: If you want to replace the icon-star-empty with the Globe icon - 'icon-globe', then you would change line 39 of your lobster/inc/theme-options.php as below:
-
-<i class="jumbo-icon icon-globe"></i>
-
-You could also just delete line 39 to get rid of the icon altogether - it's all up to you!
 
 
 == Credits ==
@@ -78,6 +65,11 @@ License: [[http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL|SIL O
 
 
 == CHANGELOG ==
+
+v1.9.5
+Added 'Template: lobster' to child-theme zip so it functions properly.
+Added conditional logic to functions.php so that the theme-options.php, custom-header.php and media.php files located in the 'inc' can be overwritten by a child theme.
+
 
 v1.9.4
 Revert CSS and JS to Boostrap 3.0.0 as too many issues with comments.php

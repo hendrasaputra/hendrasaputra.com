@@ -109,6 +109,44 @@ function dw_minion_custom_footer_code() {
 add_action('wp_footer', 'dw_minion_custom_footer_code');
 
 /**
+ * Left Sidebar Color
+ */
+function dw_minion_leftbar_color() {
+  $leftbar_bgcolor      = dw_minion_get_theme_option('leftbar_bgcolor');
+  $leftbar_bghovercolor = dw_minion_get_theme_option('leftbar_bghovercolor');
+  $leftbar_color        = dw_minion_get_theme_option('leftbar_color');
+  $leftbar_hovercolor   = dw_minion_get_theme_option('leftbar_hovercolor');
+  $leftbar_bordercolor  = dw_minion_get_theme_option('leftbar_bordercolor');
+
+  if($leftbar_bgcolor || $leftbar_bghovercolor || $leftbar_color || $leftbar_hovercolor || $leftbar_bordercolor) { ?>
+    <style type="text/css" id="minion_leftbar_color" media="screen">
+      .show-nav .show-site-nav i,.action.search label,.site-actions i {
+        color: <?php echo $leftbar_color ?>;
+      }
+      .site-actions,.show-nav .show-site-nav i,.action.search label,.site-actions i {
+        background: <?php echo $leftbar_bgcolor ?>;
+      }
+      .no-touch .site-actions .social:hover i,.back-top:hover i,.no-touch .action.search:hover label,.action.search.active label,.action.search .search-query {
+        color: <?php echo $leftbar_hovercolor ?>;
+      }
+      .no-touch .site-actions .social:hover i,.back-top:hover i,.no-touch .action.search:hover label,.action.search.active label,.action.search .search-query {
+        background: <?php echo $leftbar_bghovercolor ?>;
+      }
+      @media (min-width: 768px) {
+        .site-actions,.site-actions .actions>.back-top {
+          border-top: 1px solid <?php echo $leftbar_bordercolor ?>;
+        }
+        .social,.site-actions .actions > .action,.show-site-nav {
+          border-bottom: 1px solid <?php echo $leftbar_bordercolor ?>;
+        }
+      }
+    </style>
+    <?php
+  }
+}
+add_filter('wp_head','dw_minion_leftbar_color');
+
+/**
  * Color Selector
  */
 function dw_minion_typo_color() {
@@ -120,29 +158,10 @@ function dw_minion_typo_color() {
 
   if($minion_color) { ?>
     <style type="text/css" id="minion_color" media="screen">
-      .btn:hover,
-      #nav-below .btn:hover,
-      .accordion-heading .accordion-toggle,
-      .nav-tabs > li > a:hover, .nav-tabs > li > a:focus,
-      .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus,
-      .pager .pager-title .nav-next a:hover .btn, .pager .pager-title .nav-previous a:hover .btn,
-      .entry-footer .entry-tags .tags-links a:hover,
-      #cancel-comment-reply-link:hover,
-      #commentform #submit,
-      .post-password-required .entry-content input[type="submit"]:hover,
-      blockquote p {
+      .btn:hover,#nav-below .btn:hover,.accordion-heading .accordion-toggle,.nav-tabs > li > a:hover, .nav-tabs > li > a:focus,.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus,.pager .pager-title .nav-next a:hover .btn, .pager .pager-title .nav-previous a:hover .btn, .entry-footer .entry-tags .tags-links a:hover,#cancel-comment-reply-link:hover,#commentform #submit,.post-password-required .entry-content input[type="submit"]:hover,blockquote p {
         background-color: <?php echo $minion_color; ?>;
       }
-      a:hover,
-      .btn-link:hover,.btn-link:focus,
-      .comment-list .comment-datetime:hover,
-      .comment-list .comment-edit-link:hover,
-      .entry-meta a, .entry-meta .posted-on a:hover, .entry-meta .comments-link a:hover,
-      .format-link .entry-content a,
-      .format-quote .bq-meta a,
-      .widget_nav_menu .current_page_item > a, .widget_nav_menu .current-menu-item > a,
-      [class*="widget_recent_comments"] .url,
-      .dw_twitter .tweet-content a {
+      a:hover,.btn-link:hover,.btn-link:focus,.comment-list .comment-datetime:hover,.comment-list .comment-edit-link:hover,.entry-meta a, .entry-meta .posted-on a:hover, .entry-meta .comments-link a:hover,.format-link .entry-content a,.format-quote .bq-meta a,.widget_nav_menu .current_page_item > a, .widget_nav_menu .current-menu-item > a,[class*="widget_recent_comments"] .url,.dw_twitter .tweet-content a {
         color: <?php echo $minion_color; ?>;
       }
       .nav-tabs > .active > a:before {

@@ -3,7 +3,7 @@
  *
  * @package    lobster
  * @subpackage Functions
- * @version    1.9.4
+ * @version    1.9.5
  * @since      1.0
  * @author     Ruairi Phelan <rory@cyberdesigncraft.com>
  * @copyright  2013, Cyberdesign Craft
@@ -32,15 +32,30 @@ define( 'CYBER_DC_LOBSTER', $cyber_dc_boot_theme_data->Name );
  *
  * @since 1.0
  */
+/* Loads Child Theme media file or then uses the parent theme's file. */
+if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'inc/media.php' ) ) {
 
-/* Loads theme includes. */
-require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/media.php' 							);
+	require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/media.php' 						);
+
+} else {
+
+	/* Loads Parent's media file */
+	require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/media.php' 						);
+}
 
 /* Load extension for WP menu. */
 require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/cyber-dc-walker.php' 					);
 
-/* Functions for theme options page */
-require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/theme-options.php' 					);
+/* Loads Child Theme theme-options file or then uses the parent theme's file. */
+if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'inc/theme-options.php' ) ) {
+
+	require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/theme-options.php' 				);
+
+} else {
+
+	/* Loads the Parant theme-options file */
+	require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/theme-options.php' 				);
+}
 
 /* Functions for home page alignment */
 require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/custom-metaboxes.php' 				);
@@ -48,8 +63,16 @@ require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/custom-metabox
 /* custom image for widgets */
 require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/widgets.php' 							);
 
-/* loads custom header */
-require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/custom-header.php' 					);
+/* Loads Child Theme custom-header file or then uses the parent theme's file. */
+if ( file_exists( trailingslashit( get_stylesheet_directory() ) . 'inc/custom-header.php'  ) ) {
+
+	require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/custom-header.php'  				);
+
+} else {
+
+	/* Loads Parent's custom-header file */
+	require_once( trailingslashit( CYBER_DC_LOBSTER_TEMPLATE ) . 'inc/custom-header.php'  				);
+}
 
 
 /**

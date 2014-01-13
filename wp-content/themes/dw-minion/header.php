@@ -33,3 +33,8 @@
 		<div id="main" class="site-main">
 			<div class="site-main-inner">
 				<div class="container clearfix">
+					<?php
+					if ( is_active_sidebar( 'top-sidebar' ) ) { 
+						do_action( 'dw_minion_top_sidebar' ); 
+					} 
+					?>

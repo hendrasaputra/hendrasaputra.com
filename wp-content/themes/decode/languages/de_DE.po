@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Decode v2.8.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
-"POT-Creation-Date: 2013-12-08 23:24-0600\n"
-"PO-Revision-Date: 2013-12-08 23:26-0600\n"
+"POT-Creation-Date: 2013-12-17 20:15-0600\n"
+"PO-Revision-Date: 2013-12-17 20:17-0600\n"
 "Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
 "Language-Team: Scott Smith <mail@ScottHSmith.com>\n"
 "Language: de_DE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.1\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
@@ -37,13 +37,13 @@ msgstr ""
 "Sieht so aus als g&auml;be es hier nichts. Wie w&auml;r&rsquo;s mit einem "
 "der nachfolgenden Links oder einer Suche?"
 
-#: ../404.php:27
-msgid "Most Used Categories"
-msgstr "Meist verwendete Kategorien"
-
-#: ../404.php:43
+#: ../404.php:26
 msgid "Try looking in the monthly archives."
 msgstr "Versuch es in den Monatsarchiven."
+
+#: ../404.php:32
+msgid "Most Used Categories"
+msgstr "Meist verwendete Kategorien"
 
 #: ../archive.php:27
 #, php-format
@@ -75,22 +75,39 @@ msgid "Asides"
 msgstr "Nebenbemerkungen"
 
 #: ../archive.php:39
+#, fuzzy
+msgid "Galleries"
+msgstr "Kategorien"
+
+#: ../archive.php:42
 msgid "Images"
 msgstr "Bilder"
 
-#: ../archive.php:42
+#: ../archive.php:45
 msgid "Videos"
 msgstr "Videos"
 
-#: ../archive.php:45
+#: ../archive.php:48
 msgid "Quotes"
 msgstr "Zitate"
 
-#: ../archive.php:48
+#: ../archive.php:51
 msgid "Links"
 msgstr "Links"
 
-#: ../archive.php:51 ../page-explore.php:39 ../sidebar.php:17
+#: ../archive.php:54
+msgid "Statuses"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Audio Posts"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Chats"
+msgstr ""
+
+#: ../archive.php:63 ../page-explore.php:39 ../sidebar.php:17
 #: ../inc/extras.php:86
 msgid "Archives"
 msgstr "Archive"
@@ -208,45 +225,45 @@ msgstr ""
 "Vielleicht hilft die Suche weiter."
 
 #: ../content-page.php:17 ../content-single.php:11 ../content-single.php:76
-#: ../content.php:11 ../content.php:46 ../content.php:119 ../image.php:94
+#: ../content.php:11 ../content.php:46 ../content.php:127 ../image.php:94
 msgid "Pages:"
 msgstr "Seiten: "
 
 #: ../content-page.php:20 ../content-single.php:24 ../content-single.php:55
 #: ../content-single.php:89 ../content.php:18 ../content.php:53
-#: ../content.php:78 ../content.php:98 ../content.php:126 ../image.php:33
+#: ../content.php:78 ../content.php:103 ../content.php:134 ../image.php:33
 #: ../image.php:101 ../inc/template-tags.php:81 ../inc/template-tags.php:100
 msgid "Edit"
 msgstr "Bearbeiten"
 
 #: ../content-single.php:10 ../content-single.php:42 ../content-single.php:75
-#: ../content.php:10 ../content.php:45 ../content.php:118
+#: ../content.php:10 ../content.php:45 ../content.php:126
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
 
 #: ../content-single.php:25 ../content-single.php:56 ../content-single.php:90
-#: ../content.php:20 ../content.php:55 ../content.php:128
+#: ../content.php:20 ../content.php:55 ../content.php:136
 msgid "Tagged as: "
 msgstr "Getaggt als: "
 
 #: ../content-single.php:26 ../content-single.php:57 ../content-single.php:91
-#: ../content.php:23 ../content.php:58 ../content.php:131
+#: ../content.php:23 ../content.php:58 ../content.php:139
 msgid "Categorized in&#58; "
 msgstr "Abgelegt in&#58; "
 
-#: ../content.php:15 ../content.php:50 ../content.php:123
+#: ../content.php:15 ../content.php:50 ../content.php:131
 msgid "Leave a comment"
 msgstr "Schreibe eine Kommentar"
 
-#: ../content.php:15 ../content.php:50 ../content.php:123
+#: ../content.php:15 ../content.php:50 ../content.php:131
 msgid "1 Comment"
 msgstr "1 Kommentar"
 
-#: ../content.php:15 ../content.php:50 ../content.php:123
+#: ../content.php:15 ../content.php:50 ../content.php:131
 msgid "% Comments"
 msgstr "% Kommentare"
 
-#: ../content.php:97
+#: ../content.php:102
 msgid "Read More&hellip;"
 msgstr "Weiterlesen&hellip;"
 
@@ -263,7 +280,7 @@ msgstr "Navigations Men&uuml;"
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: ../header.php:31 ../header.php:438
+#: ../header.php:31 ../header.php:474
 msgid "Skip to content"
 msgstr "Springe zu Inhalt"
 
@@ -392,71 +409,76 @@ msgstr "Kommentare aktivieren"
 msgid "Social Options"
 msgstr "Social-Einstellung"
 
-#: ../inc/customizer.php:353
+#: ../inc/customizer.php:365
 msgid "Show Social Icons"
 msgstr "Social Icons anzeigen"
 
-#: ../inc/customizer.php:360
+#: ../inc/customizer.php:372
 msgid "Open Links in New Tab/Window"
 msgstr ""
 
-#: ../inc/customizer.php:367 ../inc/customizer.php:374
-#: ../inc/customizer.php:381 ../inc/customizer.php:388
-#: ../inc/customizer.php:395 ../inc/customizer.php:402
-#: ../inc/customizer.php:409 ../inc/customizer.php:416
-#: ../inc/customizer.php:437 ../inc/customizer.php:444
-#: ../inc/customizer.php:451 ../inc/customizer.php:458
-#: ../inc/customizer.php:465 ../inc/customizer.php:472
-#: ../inc/customizer.php:479 ../inc/customizer.php:486
-#: ../inc/customizer.php:493 ../inc/customizer.php:500
-#: ../inc/customizer.php:507 ../inc/customizer.php:514
-#: ../inc/customizer.php:521 ../inc/customizer.php:528
-#: ../inc/customizer.php:535 ../inc/customizer.php:542
-#: ../inc/customizer.php:549 ../inc/customizer.php:556
+#: ../inc/customizer.php:379 ../inc/customizer.php:386
+#: ../inc/customizer.php:393 ../inc/customizer.php:400
+#: ../inc/customizer.php:407 ../inc/customizer.php:414
+#: ../inc/customizer.php:421 ../inc/customizer.php:428
+#: ../inc/customizer.php:449 ../inc/customizer.php:456
+#: ../inc/customizer.php:463 ../inc/customizer.php:470
+#: ../inc/customizer.php:477 ../inc/customizer.php:484
+#: ../inc/customizer.php:491 ../inc/customizer.php:498
+#: ../inc/customizer.php:505 ../inc/customizer.php:512
+#: ../inc/customizer.php:519 ../inc/customizer.php:526
+#: ../inc/customizer.php:533 ../inc/customizer.php:540
+#: ../inc/customizer.php:547 ../inc/customizer.php:554
+#: ../inc/customizer.php:561 ../inc/customizer.php:568
+#: ../inc/customizer.php:575 ../inc/customizer.php:589
 msgid "Username"
 msgstr "Benutzername"
 
-#: ../inc/customizer.php:388
+#: ../inc/customizer.php:400
 msgid " (or the long number in your profile URL)"
 msgstr " (oder die lange Nummer in deiner Profil URL)"
 
-#: ../inc/customizer.php:423
+#: ../inc/customizer.php:435
 msgid "Profile URL"
 msgstr "Profil URL"
 
-#: ../inc/customizer.php:430
+#: ../inc/customizer.php:442
 msgid "Site URL"
 msgstr "Seiten URL"
 
-#: ../inc/customizer.php:563
+#: ../inc/customizer.php:582
+msgid "Group Name"
+msgstr ""
+
+#: ../inc/customizer.php:596
 msgid "RSS Feed"
 msgstr "RSS Feed"
 
-#: ../inc/customizer.php:570
+#: ../inc/customizer.php:603
 msgid "Email Address"
 msgstr "Email Adresse"
 
-#: ../inc/customizer.php:583
+#: ../inc/customizer.php:616
 msgid "Reading Options"
 msgstr "Lese-Einstellungen"
 
-#: ../inc/customizer.php:638
+#: ../inc/customizer.php:681
 msgid ""
 "Use entry excerpts instead of full text on site home. Excludes sticky posts."
 msgstr ""
 "Zeige Ausschnitte anstelle des vollen Textes an. Haftnotizen ausgenommen."
 
-#: ../inc/customizer.php:645
+#: ../inc/customizer.php:688
 msgid "Displays posts' featured images when excerpts are shown on main page."
 msgstr ""
 
-#: ../inc/customizer.php:652
+#: ../inc/customizer.php:695
 msgid "Show tags on front page (tags will be shown on post's individual page)"
 msgstr ""
 "Zeige Tags auf der Startseite (Tags werden auf der Detailseite eines Posts "
 "angezeigt)"
 
-#: ../inc/customizer.php:659
+#: ../inc/customizer.php:702
 msgid ""
 "Show categories on front page (categories will be shown on post's individual "
 "page)"
@@ -464,32 +486,40 @@ msgstr ""
 "Zeige Kategorien auf der Startseite (Kategorien werden auf der Detailseite "
 "eines Posts angezeigt)"
 
-#: ../inc/customizer.php:666
+#: ../inc/customizer.php:709
 msgid "Show author's name, profile image, and bio after posts"
 msgstr ""
 "Zeige den Namen des Autors, dessen Profilbild und Biographie nach den Posts"
 
-#: ../inc/customizer.php:673
+#: ../inc/customizer.php:716
 msgid "Entry Date Position"
 msgstr ""
 
-#: ../inc/customizer.php:677
+#: ../inc/customizer.php:720
 msgid "Above Header"
 msgstr ""
 
-#: ../inc/customizer.php:678
+#: ../inc/customizer.php:721
 msgid "Below Header"
 msgstr ""
 
-#: ../inc/customizer.php:684
+#: ../inc/customizer.php:727
 msgid "Show Page Headers"
 msgstr ""
 
-#: ../inc/customizer.php:691
+#: ../inc/customizer.php:734
+msgid "Show entry date for post excepts on the main page"
+msgstr ""
+
+#: ../inc/customizer.php:741
 msgid "Add an arrow before the title of a link post"
 msgstr "F&uuml;ge einen Pfeil vor Titeln eines Link-Posts ein"
 
-#: ../inc/customizer.php:698
+#: ../inc/customizer.php:748
+msgid "Show all post types, including custom post types"
+msgstr ""
+
+#: ../inc/customizer.php:755
 msgid ""
 "Show Theme Info (display a line of text about the theme and its creator at "
 "the bottom of pages)"
@@ -497,36 +527,36 @@ msgstr ""
 "Zeige Theme Info (zeige ein Zeile รผber das Theme und dessen Entwickler am "
 "unteren Seitenrand an)"
 
-#: ../inc/customizer.php:705
+#: ../inc/customizer.php:762
 msgid "Text (colophon, copyright, credits, etc.) for the footer of the site"
 msgstr ""
 "Text (Schlussschrift, Copyright, Abspann, etc.) fรผr die Fusszeile der Seite"
 
-#: ../inc/customizer.php:718
+#: ../inc/customizer.php:775
 msgid "Other Options"
 msgstr "Weitere Einstellungen"
 
-#: ../inc/customizer.php:730
+#: ../inc/customizer.php:787
 msgid "Custom CSS"
 msgstr "Benutzerdefiniertes CSS"
 
-#: ../inc/customizer.php:769
+#: ../inc/customizer.php:826
 msgid "Accent Color"
 msgstr "Akzentfarbe"
 
-#: ../inc/customizer.php:775
+#: ../inc/customizer.php:832
 msgid "Active Link Color"
 msgstr "Farbe aktiver Links"
 
-#: ../inc/customizer.php:781
+#: ../inc/customizer.php:838
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: ../inc/customizer.php:787
+#: ../inc/customizer.php:844
 msgid "Secondary Text Color"
 msgstr "Zweite Textfarbe"
 
-#: ../inc/customizer.php:793
+#: ../inc/customizer.php:850
 msgid "Use accent color instead of text color for icons"
 msgstr "Verwende Akzentfarbe anstelle der Textfarbe fรผr die Icons"
 
@@ -547,9 +577,8 @@ msgid "Page "
 msgstr "Seite"
 
 #: ../inc/template-tags.php:23
-#, fuzzy
 msgid "Posts navigation"
-msgstr "Post Navigation"
+msgstr ""
 
 #: ../inc/template-tags.php:27
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
@@ -564,16 +593,14 @@ msgid "Post navigation"
 msgstr "Post Navigation"
 
 #: ../inc/template-tags.php:59
-#, fuzzy
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span> %title"
-msgstr "<span class=\"meta-nav\">&larr;</span> Vorherige"
+msgstr ""
 
 #: ../inc/template-tags.php:60
-#, fuzzy
 msgctxt "Next post link"
 msgid "%title <span class=\"meta-nav\">&rarr;</span>"
-msgstr "N&auml;chste <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
 
 #: ../inc/template-tags.php:81
 msgid "Pingback:"
@@ -613,7 +640,6 @@ msgid "View all posts by %s"
 msgstr "Zeige alle Posts von %s"
 
 #. Theme Description
-#, fuzzy
 msgid ""
 "A minimal, modern theme, designed to be mobile first and fully responsive, "
 "Decode features the ability to change all the colors in the theme and an "
@@ -623,7 +649,7 @@ msgid ""
 "elegent two-column experience. You can even disable the sidebar and comment "
 "links if you choose. Decode supports link posts, where the title can be "
 "hyperlinked. Decode includes custom social icons in the header that you can "
-"easily link to your choice of 28 different social profiles from Twitter, and "
+"easily link to your choice of 30 different social profiles from Twitter, and "
 "App.net, to Pinterest and LinkedIn, you will be sure to find support for the "
 "network you want alongside a bevy of customizations to make your site "
 "unique. Lastly, Decode is also built alongside a companion plugin that adds "
@@ -634,7 +660,7 @@ msgstr ""
 "Ein einfaches, modernes, speziell für Mobilger&auml;te designtes Theme, "
 "welches die M&ouml;glichkeit bietet alle Farben im Theme zu &auml;ndern und "
 "eine elegante Seitenleiste bietet, die bequem per Klick auf das Men&uuml; "
-"icon erreicht werden kann. Die Seitenleiser kann eine unbegrenzte Anzahl von "
+"con erreicht werden kann. Die Seitenleiser kann eine unbegrenzte Anzahl von "
 "frei w&auml;hlbaren Widgets enthalten. Ebenfalls frei gew&auml;hlt werden "
 "kann die Position der Seitenleiste (links oder rechts) und ob sie immer "
 "sichtbar sein soll oder geschlossen werden kann. Wenn du willst, kannst du "

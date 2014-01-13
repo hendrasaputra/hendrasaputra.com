@@ -83,7 +83,7 @@ function dw_minion_customize_register( $wp_customize ) {
 
   // SITE LAYOUT --------------------------------------------------------------------------------------
   $wp_customize->add_section('dw_minion_layout', array(
-    'title'    => __('Site Layout', 'dw-minion'),
+    'title'    => __('Site Alignment', 'dw-minion'),
     'priority' => 10,
   ));
 
@@ -93,7 +93,7 @@ function dw_minion_customize_register( $wp_customize ) {
   ));
 
   $wp_customize->add_control( new Layout_Picker_Custom_control($wp_customize, 'layout', array(
-    'label' => __('Layout', 'dw-minion'),
+    'label' => __('Align Left/Center', 'dw-minion'),
     'section' => 'dw_minion_layout',
     'settings' => 'dw_minion_theme_options[layout]',
     'choices' => array('left', 'center')
@@ -147,7 +147,7 @@ function dw_minion_customize_register( $wp_customize ) {
   // SOCIAL LINKS --------------------------------------------------------------------------------------
   $wp_customize->add_section('dw_minion_social_links', array(
     'title'    => __('Social Links', 'dw-minion'),
-    'priority' => 110,
+    'priority' => 108,
   ));
   $wp_customize->add_setting('dw_minion_theme_options[facebook]', array(
     'default'        => '',
@@ -199,6 +199,57 @@ function dw_minion_customize_register( $wp_customize ) {
     'section'    => 'dw_minion_social_links',
     'settings'   => 'dw_minion_theme_options[linkedin]',
   ));
+
+  // LEFT SIDEBAR COLOR --------------------------------------------------------------------------------------
+  $wp_customize->add_section('dw_minion_leftbar', array(
+    'title'    => __('Left Sidebar Color', 'dw-minion'),
+    'priority' => 109,
+  ));
+  $wp_customize->add_setting('dw_minion_theme_options[leftbar_bgcolor]', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'leftbar_bgcolor', array(
+    'label'        => __( 'Background Color', 'dw-minion' ),
+    'section'    => 'dw_minion_leftbar',
+    'settings'   => 'dw_minion_theme_options[leftbar_bgcolor]',
+  )));
+  $wp_customize->add_setting('dw_minion_theme_options[leftbar_bghovercolor]', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'leftbar_bghovercolor', array(
+    'label'        => __( 'Background Hover Color', 'dw-minion' ),
+    'section'    => 'dw_minion_leftbar',
+    'settings'   => 'dw_minion_theme_options[leftbar_bghovercolor]',
+  )));
+  $wp_customize->add_setting('dw_minion_theme_options[leftbar_color]', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'leftbar_color', array(
+    'label'        => __( 'Text Color', 'dw-minion' ),
+    'section'    => 'dw_minion_leftbar',
+    'settings'   => 'dw_minion_theme_options[leftbar_color]',
+  )));
+  $wp_customize->add_setting('dw_minion_theme_options[leftbar_hovercolor]', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'leftbar_hovercolor', array(
+    'label'        => __( 'Text Hover Color', 'dw-minion' ),
+    'section'    => 'dw_minion_leftbar',
+    'settings'   => 'dw_minion_theme_options[leftbar_hovercolor]',
+  )));
+  $wp_customize->add_setting('dw_minion_theme_options[leftbar_bordercolor]', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'leftbar_bordercolor', array(
+    'label'        => __( 'Border Color', 'dw-minion' ),
+    'section'    => 'dw_minion_leftbar',
+    'settings'   => 'dw_minion_theme_options[leftbar_bordercolor]',
+  )));
 
   // STYLE SELECTOR --------------------------------------------------------------------------------------
   $wp_customize->add_section('dw_minion_primary_color', array(
